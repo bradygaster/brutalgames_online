@@ -11,6 +11,8 @@ How to decide who handles what.
 | Visual design, styling, animations | Cereal | Neo-brutalist CSS, typography, hover states, CRT effects |
 | Code review, scope, priorities | Crash | Review PRs, trade-offs, decisions |
 | Testing, quality, accessibility | Phreak | Cross-browser, mobile, performance, a11y |
+| E2E testing, Playwright, PR validation | Nikon | Game submission tests, CI workflows, visual regression |
+| DevRel, demos, contributing guides, GIFs | Razor | CONTRIBUTING.md, demo scripts, animated GIFs, README |
 | Session logging | Scribe | Automatic — never needs routing |
 
 ## Issue Routing

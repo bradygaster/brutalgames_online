@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-18T16:31:59-07:00",
+  "games": [
+    {
+      "id": "neon-bricks",
+      "title": "Neon Bricks",
+      "description": "A sharp-edged brick breaker with fast rounds and reactive power-ups.",
+      "genre": "Arcade",
+      "playerCount": "1 player",
+      "thumbnail": "./assets/thumbnails/neon-bricks.png",
+      "entryPoint": "./games/neon-bricks/index.html",
+      "status": "coming-soon",
+      "featured": true,
+      "tags": ["retro", "score-chaser", "fast"],
+      "dateAdded": "2026-05-18T16:03:14-07:00"
+    },
+    {
+      "id": "void-runner",
+      "title": "Void Runner",
+      "description": "Dodge collapsing lanes and survive the tunnel for as long as you can.",
+      "genre": "Runner",
+      "playerCount": "1 player",
+      "thumbnail": "./assets/thumbnails/void-runner.png",
+      "entryPoint": "./games/void-runner/index.html",
+      "status": "experimental",
+      "featured": false,
+      "tags": ["endless", "reflex", "synthwave"],
+      "dateAdded": "2026-05-18T16:03:14-07:00"
+    },
+    {
+      "id": "couch-chaos",
+      "title": "Couch Chaos",
+      "description": "A same-screen versus prototype built for loud local sessions.",
+      "genre": "Party",
+      "playerCount": "2-4 players",
+      "thumbnail": "./assets/thumbnails/couch-chaos.png",
+      "entryPoint": "./games/couch-chaos/index.html",
+      "status": "coming-soon",
+      "featured": false,
+      "tags": ["local-multiplayer", "versus", "party"],
+      "dateAdded": "2026-05-18T16:03:14-07:00"
+    },
+    {
+      "id": "grid-warden",
+      "title": "Grid Warden",
+      "description": "Defend a brutalist city block in a tactical survival experiment.",
+      "genre": "Strategy",
+      "playerCount": "1 player",
+      "thumbnail": "./assets/thumbnails/grid-warden.png",
+      "entryPoint": "./games/grid-warden/index.html",
+      "status": "active",
+      "featured": false,
+      "tags": ["defense", "survival", "tactical"],
+      "dateAdded": "2026-05-18T16:03:14-07:00"
+    },
+    {
+      "id": "test-lab-showcase",
+      "title": "Test Lab Showcase",
+      "description": "A bright little fixture game used for PR validation and demo recordings.",
+      "genre": "Arcade",
+      "playerCount": "1 player",
+      "thumbnail": "./assets/thumbnails/test-lab-showcase.png",
+      "entryPoint": "./tests/fixtures/sample-game/index.html",
+      "status": "active",
+      "featured": false,
+      "tags": ["demo", "submission", "fixture"],
+      "dateAdded": "2026-05-18T16:31:59-07:00"
+    }
+  ]
+}

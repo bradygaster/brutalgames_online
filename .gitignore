@@ -6,3 +6,6 @@
 .squad/.scratch/
 # Squad: SubSquad activation file (local to this machine)
 .squad-workstream
+node_modules/
+playwright-report/
+test-results/

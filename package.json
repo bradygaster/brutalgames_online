@@ -1,0 +1,17 @@
+{
+  "name": "brutalgames-online",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "serve:test": "http-server . -c-1 -a 127.0.0.1 -p 4173",
+    "test:e2e": "playwright test",
+    "test:e2e:headed": "playwright test --headed",
+    "test:e2e:demo": "playwright test tests/demo-recording.spec.js --project=chromium"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.54.2",
+    "http-server": "^14.1.1",
+    "wait-on": "^8.0.3"
+  }
+}

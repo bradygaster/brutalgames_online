@@ -16,6 +16,8 @@
 | Acid | Frontend Dev | .squad/agents/acid/charter.md | ⚛️ Active |
 | Cereal | Designer | .squad/agents/cereal/charter.md | 🎨 Active |
 | Phreak | Tester | .squad/agents/phreak/charter.md | 🧪 Active |
+| Nikon | E2E Tester | .squad/agents/nikon/charter.md | 🧪 Active |
+| Razor | DevRel | .squad/agents/razor/charter.md | 📝 Active |
 | Scribe | Scribe | .squad/agents/scribe/charter.md | 📋 Active |
 | Ralph | Work Monitor | — | 🔄 Monitor |
 

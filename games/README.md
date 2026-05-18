@@ -1,23 +1,19 @@
-# Adding a new game
+# Games folder
 
-BrutalGames.online is designed so new games can be dropped in with minimal wiring.
+This directory is the cabinet row.
 
-## 3-step process
+Every game gets its own folder. The shell discovers games through `games.json`, not through magic.
 
-1. **Add the game folder**
-   - Create a new folder inside `games/`.
-   - Put the game's standalone HTML entry file inside it, usually `games/<game-id>/index.html`.
+## Start here
 
-2. **Add metadata to `games.json`**
-   - Append a new object to the `games` array.
-   - Include `id`, `title`, `description`, `genre`, `playerCount`, `thumbnail`, `entryPoint`, `status`, `featured`, `tags`, and `dateAdded`.
+- Read [`../CONTRIBUTING.md`](../CONTRIBUTING.md) for the full drop-in flow.
+- Copy [`_template/`](./_template/) when you want a fast starting point.
 
-3. **Optionally add a thumbnail**
-   - Place a thumbnail image under `assets/thumbnails/`.
-   - Point the metadata `thumbnail` field to that asset.
+## Rules of the arcade
 
-## Notes
+1. Put each game in `games/<game-id>/`.
+2. Make sure `entryPoint` points at a real HTML file.
+3. Keep the game standalone and static-host friendly.
+4. Thumbnails are welcome, but optional.
 
-- `status: "active"` enables the launch button in the lobby.
-- `status: "coming-soon"` or `"experimental"` keeps the card visible without making it a primary launch target.
-- Use relative paths in metadata so the project stays static-host friendly.
+If your game loads and the metadata is honest, you are on the right path.
