@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrutalGames.online | Browser Arcade</title>
+  <meta name="description" content="BrutalGames.online is a neo-brutalist browser arcade for fast-loading mini-games, experiments, and featured picks.">
+  <meta name="keywords" content="browser games, arcade, indie games, neo-brutalism, html games, iframe arcade">
+  <meta name="theme-color" content="#111111">
+  <meta property="og:title" content="BrutalGames.online | Browser Arcade">
+  <meta property="og:description" content="A metadata-driven browser arcade shell for standalone HTML games and experiments.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://brutalgames.online/">
+  <meta property="og:image" content="https://brutalgames.online/assets/social-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BrutalGames.online | Browser Arcade">
+  <meta name="twitter:description" content="Launch featured browser games, browse the lobby, and discover new arcade experiments.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Primary">
+      <a class="site-brand" href="#top">BrutalGames.online</a>
+      <ul class="nav-list">
+        <li><a href="#featured">Featured</a></li>
+        <li><a href="#games">Games</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Browser arcade shell</p>
+        <h1 id="hero-title">Play brutal little games without the bloat.</h1>
+        <p class="hero-text">A dead-simple lobby for standalone HTML games, iframe experiences, and experimental arcade drops.</p>
+      </div>
+      <div class="hero-actions">
+        <a class="button" href="#games">Browse the lobby</a>
+        <a class="button button-secondary" href="#featured">See featured game</a>
+      </div>
+    </section>
+  </header>
+
+  <main id="main-content">
+    <section id="featured" class="featured-section" aria-labelledby="featured-title">
+      <div class="section-heading">
+        <p class="eyebrow">Featured</p>
+        <h2 id="featured-title">Featured game</h2>
+      </div>
+      <div id="featured-game" class="featured-game" aria-live="polite">
+        <p>Loading featured game...</p>
+      </div>
+    </section>
+
+    <section id="games" class="games-section" aria-labelledby="games-title">
+      <div class="section-heading">
+        <p class="eyebrow">Lobby</p>
+        <h2 id="games-title">Game grid</h2>
+      </div>
+
+      <form class="filters" aria-label="Game filters">
+        <label>
+          <span>Genre</span>
+          <select id="genre-filter" name="genre">
+            <option value="all">All genres</option>
+          </select>
+        </label>
+        <label>
+          <span>Tag</span>
+          <input id="tag-filter" name="tag" type="search" placeholder="Filter by tag">
+        </label>
+      </form>
+
+      <p id="game-count" class="game-count" aria-live="polite"></p>
+      <div id="game-grid" class="game-grid" role="list" aria-live="polite">
+        <p>Loading games...</p>
+      </div>
+    </section>
+
+    <section id="about" class="about-section" aria-labelledby="about-title">
+      <div class="section-heading">
+        <p class="eyebrow">Platform</p>
+        <h2 id="about-title">How the shell works</h2>
+      </div>
+      <p>Games register through metadata, render in the lobby automatically, and launch as standalone HTML experiences inside an iframe modal or dedicated context.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built for fast iteration, static hosting, and dead-simple game drops.</p>
+  </footer>
+
+  <dialog id="game-launcher" class="game-launcher" aria-labelledby="game-launcher-title">
+    <div class="launcher-shell">
+      <div class="launcher-bar">
+        <h2 id="game-launcher-title">Launching game</h2>
+        <button id="close-launcher" class="button button-secondary" type="button">Close</button>
+      </div>
+      <iframe id="game-frame" title="Game player" loading="lazy"></iframe>
+    </div>
+  </dialog>
+
+  <noscript>
+    <p>This arcade lobby needs JavaScript enabled to load game metadata.</p>
+  </noscript>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
