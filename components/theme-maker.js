@@ -8,13 +8,13 @@ const COOKIE_NAME = 'brutalgames_theme';
 const COOKIE_DAYS = 365;
 
 const THEME_VARS = [
-  { key: '--color-background', label: 'Background', default: '#141414' },
-  { key: '--color-surface', label: 'Surface', default: '#fffdf7' },
-  { key: '--color-pink', label: 'Pink', default: '#ff47b8' },
-  { key: '--color-yellow', label: 'Yellow', default: '#ffe100' },
-  { key: '--color-green', label: 'Green', default: '#83ff3c' },
-  { key: '--color-blue', label: 'Blue', default: '#2d7fff' },
-  { key: '--color-red', label: 'Red', default: '#ff5a36' }
+  { key: '--color-background', label: 'Walls', default: '#141414' },
+  { key: '--color-surface', label: 'Screens', default: '#fffdf7' },
+  { key: '--color-pink', label: 'Neon Signs', default: '#ff47b8' },
+  { key: '--color-yellow', label: 'Cabinets', default: '#ffe100' },
+  { key: '--color-green', label: 'Coin Slots', default: '#83ff3c' },
+  { key: '--color-blue', label: 'Wiring', default: '#2d7fff' },
+  { key: '--color-red', label: 'Kill Screen', default: '#ff5a36' }
 ];
 
 function setCookie(name, value, days) {
