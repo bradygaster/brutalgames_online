@@ -53,6 +53,19 @@
       "featured": false,
       "tags": ["defense", "survival", "tactical"],
       "dateAdded": "2026-05-18T16:03:14-07:00"
+    },
+    {
+      "id": "brutal-chess",
+      "title": "BrutalChess",
+      "description": "A fully playable chess game with neo-brutalist purple aesthetics and local two-player support.",
+      "genre": "Strategy",
+      "playerCount": "2 players",
+      "thumbnail": "",
+      "entryPoint": "./games/brutal-chess/index.html",
+      "status": "active",
+      "featured": true,
+      "tags": ["chess", "strategy", "local-multiplayer", "classic"],
+      "dateAdded": "2026-05-23T00:44:00-07:00"
     }
   ]
 }
