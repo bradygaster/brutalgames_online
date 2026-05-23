@@ -113,7 +113,7 @@ You do **not** need to edit the root `games.json` directly.
 | `description` | Lobby pitch | One sentence. Tell players why they should care. |
 | `genre` | High-level category | Examples: `Arcade`, `Puzzle`, `Runner`, `Party`. |
 | `playerCount` | Who can play | Examples: `1 player`, `2 players`, `2-4 players`. |
-| `thumbnail` | Optional card art | Use a relative path. If you skip it, the shell will show a loud fallback tile instead. |
+| `thumbnail` | **Required** card art | A screenshot of your game at `assets/thumbnails/<your-game-id>.png`. Every game MUST include one. |
 | `entryPoint` | HTML file to launch | Usually `./games/<id>/index.html`. |
 | `status` | Availability in the lobby | Use `active`, `experimental`, or `coming-soon`. `active` is launchable. |
 | `featured` | Featured slot flag | `true` if you want it eligible for the hero cabinet. Usually `false`. |
@@ -121,7 +121,19 @@ You do **not** need to edit the root `games.json` directly.
 | `contributor` | Your GitHub username | Displayed on the card as a link to your profile. Own your cabinet. |
 | `dateAdded` | Timestamp for the drop | Use `2026-05-18T16:31:59-07:00` for your example updates in docs and copy. |
 
-### 4) Submit the pull request
+### 4) Add a thumbnail screenshot
+
+**This is mandatory.** Every game must ship with a screenshot at:
+
+```
+assets/thumbnails/<your-game-id>.png
+```
+
+This is what shows up on your arcade cabinet card. Make it look good — capture your game in action. PNG format, any reasonable size (the shell will scale it).
+
+No thumbnail = PR won't be merged. No exceptions.
+
+### 5) Submit the pull request
 
 Use the game submission PR template. It asks for the good stuff:
 

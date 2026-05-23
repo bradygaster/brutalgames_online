@@ -4,8 +4,8 @@
   --color-black: #050505;
   --color-white: #fffdf7;
   --color-background: #141414;
-  --color-surface: #fffdf7;
-  --color-surface-alt: #f5f1e6;
+  --color-surface: #1e1e1e;
+  --color-surface-alt: #2a2a2a;
   --color-pink: #ff47b8;
   --color-yellow: #ffe100;
   --color-green: #83ff3c;
@@ -250,7 +250,7 @@ ol[role='list'] {
   right: var(--space-3);
   padding: var(--space-2) var(--space-3);
   border: var(--border-thin) solid var(--color-border);
-  background: var(--color-white);
+  background: var(--color-yellow);
   box-shadow: var(--shadow-xs);
   font-family: var(--font-arcade);
   font-size: 0.65rem;
@@ -280,8 +280,8 @@ ol[role='list'] {
   padding: var(--space-3);
   border: var(--border-thick) solid var(--color-border);
   border-radius: var(--radius-sm);
-  background: var(--color-white);
-  color: var(--color-black);
+  background: var(--color-surface);
+  color: var(--color-white);
   box-shadow: var(--shadow-md);
 }
 
@@ -380,7 +380,7 @@ ol[role='list'] {
   min-height: 100%;
   padding: var(--space-5);
   background: var(--color-surface);
-  color: var(--color-ink);
+  color: var(--color-white);
   transition:
     transform var(--duration-fast) steps(2, end),
     box-shadow var(--duration-fast) steps(2, end),
@@ -481,7 +481,8 @@ ol[role='list'] {
 }
 
 .tag {
-  background: var(--color-white);
+  background: var(--color-surface-alt);
+  color: var(--color-white);
   font-size: 0.9rem;
   font-weight: 700;
 }
@@ -513,7 +514,7 @@ ol[role='list'] {
 }
 
 .text-shadow-punch {
-  text-shadow: 3px 3px 0 var(--color-white);
+  text-shadow: 3px 3px 0 var(--color-black);
 }
 
 .surface-panel {
@@ -521,7 +522,7 @@ ol[role='list'] {
   border: var(--border-thick) solid var(--color-border);
   background: var(--color-surface-alt);
   box-shadow: var(--shadow-md);
-  color: var(--color-black);
+  color: var(--color-white);
 }
 
 @keyframes hover-slam {
