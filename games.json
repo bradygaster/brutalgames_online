@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-23T08:04:25.630Z",
+  "generatedAt": "2026-05-23T08:21:35.046Z",
   "games": [
     {
       "id": "brutal-chess",
@@ -38,6 +38,25 @@
       ],
       "contributor": "bradygaster",
       "dateAdded": "2026-05-18T16:03:14-07:00"
+    },
+    {
+      "id": "missile-command",
+      "title": "Missile Command",
+      "description": "Defend your cities from incoming missiles. Click to launch counter-missiles and protect civilization from annihilation.",
+      "thumbnail": "assets/thumbnails/missile-command.png",
+      "genre": "arcade",
+      "tags": [
+        "retro",
+        "arcade",
+        "defense",
+        "action"
+      ],
+      "players": "1",
+      "contributor": {
+        "name": "bradygaster",
+        "url": "https://github.com/bradygaster"
+      },
+      "dateAdded": "2025-07-25"
     }
   ]
 }
