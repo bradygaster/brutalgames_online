@@ -256,8 +256,10 @@ main {
 }
 
 .game-launcher {
-  width: min(100% - 2rem, 76rem);
+  width: min(100% - 2rem, 90rem);
+  height: min(100% - 2rem, 95vh);
   max-width: none;
+  max-height: none;
   padding: 0;
   border: none;
   background: transparent;
@@ -271,11 +273,15 @@ main {
   padding: var(--space-4);
   background: var(--color-yellow);
   color: var(--color-black);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 #game-frame {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  flex: 1;
+  min-height: 0;
   border: var(--border-thick) solid var(--color-border);
   background: var(--color-black);
 }
