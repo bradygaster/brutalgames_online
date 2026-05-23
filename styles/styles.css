@@ -382,10 +382,10 @@ main {
   right: 0;
   width: 16rem;
   padding: var(--space-4);
-  border: var(--border-thick) solid var(--color-border);
+  border: var(--border-thick) solid #333;
   border-radius: var(--radius-sm);
-  background: var(--color-surface);
-  color: var(--color-ink);
+  background: #1a1a1a;
+  color: #e0e0e0;
   box-shadow: var(--shadow-lg);
 }
 
@@ -395,6 +395,7 @@ main {
   font-size: 0.6rem;
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
+  color: #ffffff;
 }
 
 .theme-maker-swatches {
@@ -438,6 +439,7 @@ main {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
+  color: #e0e0e0;
 }
 
 .theme-maker-actions {
@@ -452,7 +454,8 @@ main {
 }
 
 .theme-reset {
-  background: var(--color-surface-alt) !important;
+  background: #333 !important;
+  color: #e0e0e0 !important;
 }
 
 .theme-maker-themes {
@@ -466,7 +469,7 @@ main {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: var(--space-2);
-  color: var(--color-yellow);
+  color: #ffe100;
 }
 
 .theme-grid {
