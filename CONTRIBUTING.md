@@ -219,6 +219,30 @@ Less ideal:
 
 ---
 
+## What your game looks like in the arcade
+
+When your game is submitted, the arcade shell renders it as a card in the lobby grid — and if it's featured, as the hero cabinet:
+
+![Featured game card in the arcade shell](docs/arcade-featured-screenshot.png)
+
+Games with a thumbnail get a custom card image. Without one, the shell generates a bold fallback tile with the game's initial. Either way, your game shows up with its title, description, genre, player count, and tags.
+
+Here's BrutalChess in action — a quick gameplay GIF captured with Playwright:
+
+![BrutalChess gameplay](docs/brutal-chess-gameplay.gif)
+
+### Thumbnails
+
+Thumbnails are optional but recommended. A good thumbnail is:
+
+- **800×600 or similar** — the shell scales it down for the card
+- **High contrast** — it lives on a loud grid, so make it pop
+- **Representative** — show a moment from the game, not just a title card
+
+If you skip the thumbnail, the fallback tile works fine. But a real screenshot or GIF makes the cabinet stand out.
+
+---
+
 ## Design tips for the arcade shell
 
 You do **not** have to match the shell visually.

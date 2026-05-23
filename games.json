@@ -60,7 +60,7 @@
       "description": "A fully playable chess game with neo-brutalist purple aesthetics and local two-player support.",
       "genre": "Strategy",
       "playerCount": "2 players",
-      "thumbnail": "",
+      "thumbnail": "./assets/thumbnails/brutal-chess.png",
       "entryPoint": "./games/brutal-chess/index.html",
       "status": "active",
       "featured": true,
