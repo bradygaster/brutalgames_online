@@ -155,6 +155,7 @@ export class GameLoader {
         <p class="status-pill">${escapeHtml(featuredGame.status)}</p>
         <h3>${escapeHtml(featuredGame.title)}</h3>
         <p>${escapeHtml(featuredGame.description)}</p>
+        ${this.renderContributor(featuredGame.contributor)}
         <dl class="game-meta">
           <div><dt>Genre</dt><dd>${escapeHtml(featuredGame.genre)}</dd></div>
           <div><dt>Players</dt><dd>${escapeHtml(featuredGame.playerCount)}</dd></div>
@@ -195,6 +196,7 @@ export class GameLoader {
             <span class="status-pill">${escapeHtml(game.status)}</span>
           </div>
           <p>${escapeHtml(game.description)}</p>
+          ${this.renderContributor(game.contributor)}
           <p class="game-summary">${escapeHtml(game.genre)} · ${escapeHtml(game.playerCount)}</p>
           <div class="tag-list">${this.renderTags(game.tags)}</div>
           <button class="button" type="button" ${!this.isLaunchable(game) ? 'disabled' : ''}>${this.isLaunchable(game) ? 'Launch game' : 'Coming soon'}</button>
@@ -208,6 +210,12 @@ export class GameLoader {
 
   renderTags(tags = []) {
     return tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join('');
+  }
+
+  renderContributor(handle) {
+    if (!handle) return '';
+    const safe = escapeHtml(handle);
+    return `<p class="contributor">by <a href="https://github.com/${safe}" target="_blank" rel="noopener">@${safe}</a></p>`;
   }
 
   renderThumbnailMarkup(game) {
