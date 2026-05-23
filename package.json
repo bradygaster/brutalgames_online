@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "build:registry": "node scripts/build-games-json.js",
     "serve:test": "http-server . -c-1 -a 127.0.0.1 -p 4173",
     "test:e2e": "playwright test",
     "test:e2e:headed": "playwright test --headed",

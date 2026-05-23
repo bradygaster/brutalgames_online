@@ -1,0 +1,14 @@
+{
+  "id": "grid-warden",
+  "title": "Grid Warden",
+  "description": "Defend a brutalist city block in a tactical survival experiment.",
+  "genre": "Strategy",
+  "playerCount": "1 player",
+  "thumbnail": "./assets/thumbnails/grid-warden.png",
+  "entryPoint": "./games/grid-warden/index.html",
+  "status": "active",
+  "featured": false,
+  "tags": ["defense", "survival", "tactical"],
+  "contributor": "bradygaster",
+  "dateAdded": "2026-05-18T16:03:14-07:00"
+}

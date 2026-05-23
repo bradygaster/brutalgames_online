@@ -231,6 +231,24 @@ main {
   text-transform: uppercase;
 }
 
+.contributor {
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: var(--space-1) 0;
+}
+
+.contributor a {
+  color: var(--color-pink);
+  text-decoration: none;
+  font-weight: 700;
+  border-bottom: 2px solid currentColor;
+}
+
+.contributor a:hover {
+  color: var(--color-yellow);
+}
+
 .status-pill,
 .tag {
   display: inline-flex;
@@ -256,8 +274,10 @@ main {
 }
 
 .game-launcher {
-  width: min(100% - 2rem, 76rem);
+  width: min(100% - 2rem, 90rem);
+  height: min(100% - 2rem, 95vh);
   max-width: none;
+  max-height: none;
   padding: 0;
   border: none;
   background: transparent;
@@ -271,11 +291,15 @@ main {
   padding: var(--space-4);
   background: var(--color-yellow);
   color: var(--color-black);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 #game-frame {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  flex: 1;
+  min-height: 0;
   border: var(--border-thick) solid var(--color-border);
   background: var(--color-black);
 }

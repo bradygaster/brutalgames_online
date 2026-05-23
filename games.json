@@ -1,45 +1,25 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-18T16:03:14-07:00",
+  "generatedAt": "2026-05-23T08:04:25.630Z",
   "games": [
     {
-      "id": "neon-bricks",
-      "title": "Neon Bricks",
-      "description": "A sharp-edged brick breaker with fast rounds and reactive power-ups.",
-      "genre": "Arcade",
+      "id": "brutal-chess",
+      "title": "BrutalChess",
+      "description": "Neo-brutalist terminal energy. White is human. Black is a minimax machine with zero mercy.",
+      "genre": "Strategy",
       "playerCount": "1 player",
-      "thumbnail": "./assets/thumbnails/neon-bricks.png",
-      "entryPoint": "./games/neon-bricks/index.html",
-      "status": "coming-soon",
+      "thumbnail": "./assets/thumbnails/brutal-chess.png",
+      "entryPoint": "./games/brutal-chess/index.html",
+      "status": "active",
       "featured": true,
-      "tags": ["retro", "score-chaser", "fast"],
-      "dateAdded": "2026-05-18T16:03:14-07:00"
-    },
-    {
-      "id": "void-runner",
-      "title": "Void Runner",
-      "description": "Dodge collapsing lanes and survive the tunnel for as long as you can.",
-      "genre": "Runner",
-      "playerCount": "1 player",
-      "thumbnail": "./assets/thumbnails/void-runner.png",
-      "entryPoint": "./games/void-runner/index.html",
-      "status": "experimental",
-      "featured": false,
-      "tags": ["endless", "reflex", "synthwave"],
-      "dateAdded": "2026-05-18T16:03:14-07:00"
-    },
-    {
-      "id": "couch-chaos",
-      "title": "Couch Chaos",
-      "description": "A same-screen versus prototype built for loud local sessions.",
-      "genre": "Party",
-      "playerCount": "2-4 players",
-      "thumbnail": "./assets/thumbnails/couch-chaos.png",
-      "entryPoint": "./games/couch-chaos/index.html",
-      "status": "coming-soon",
-      "featured": false,
-      "tags": ["local-multiplayer", "versus", "party"],
-      "dateAdded": "2026-05-18T16:03:14-07:00"
+      "tags": [
+        "chess",
+        "strategy",
+        "ai",
+        "classic"
+      ],
+      "contributor": "bradygaster",
+      "dateAdded": "2026-05-23T00:44:00-07:00"
     },
     {
       "id": "grid-warden",
@@ -51,7 +31,12 @@
       "entryPoint": "./games/grid-warden/index.html",
       "status": "active",
       "featured": false,
-      "tags": ["defense", "survival", "tactical"],
+      "tags": [
+        "defense",
+        "survival",
+        "tactical"
+      ],
+      "contributor": "bradygaster",
       "dateAdded": "2026-05-18T16:03:14-07:00"
     }
   ]

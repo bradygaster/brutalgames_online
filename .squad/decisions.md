@@ -56,6 +56,23 @@
 - The game grid is mobile-first and scales 1 / 2 / 3 / 4 columns across breakpoints.
 - Navigation stacks on small screens and shifts horizontal once space opens up.
 
+### Nikon E2E Setup (2026-05-18T16:31:59-07:00)
+
+1. Standardize on Playwright with a local static `http-server` so the suite exercises the real static shell instead of a mocked application runtime.
+2. Run the PR gate across Chromium, Firefox, WebKit, iPhone 13, and iPad Pro 11 to cover both cross-browser and responsive regressions.
+3. Keep submission and error-state scenarios deterministic by injecting alternate `games.json` payloads with Playwright routing instead of mutating shared repo files during the run.
+4. Record video for every project and keep a dedicated slow demo walkthrough so DevRel can turn the captured flows into animated GIFs.
+5. Harden the shell around thumbnail fallback, invalid registry entries, and launcher cleanup because those behaviors are directly coupled to reliable E2E coverage.
+
+### Razor DevRel Setup (2026-05-18T16:31:59-07:00)
+
+1. The contributor journey should be anchored around a four-step ritual: fork, add `games/<id>/`, register the game in `games.json`, submit a PR.
+2. `CONTRIBUTING.md` should match the neo-brutalist arcade voice so onboarding feels exciting instead of corporate.
+3. The docs should support both extremes of contribution: a single-file `index.html` game and a richer multi-file cabinet with sounds, art, and supporting assets.
+4. Thumbnails are optional in the contribution flow; the shell and docs should make that explicit so the smallest viable contribution stays friction-light.
+5. The live demo should use a two-act, eight-minute structure: restyle a recognizable classic, then add it to the arcade live and point to PR checks.
+6. The repo should ship a starter game template, a fun PR template, a stage-ready demo script, and a GIF generation script that turns Nikon's Playwright recording into `docs/demo.gif`.
+
 ## Governance
 
 - All meaningful changes require team consensus

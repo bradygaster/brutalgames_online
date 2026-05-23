@@ -1,0 +1,14 @@
+{
+  "id": "brutal-chess",
+  "title": "BrutalChess",
+  "description": "Neo-brutalist terminal energy. White is human. Black is a minimax machine with zero mercy.",
+  "genre": "Strategy",
+  "playerCount": "1 player",
+  "thumbnail": "./assets/thumbnails/brutal-chess.png",
+  "entryPoint": "./games/brutal-chess/index.html",
+  "status": "active",
+  "featured": true,
+  "tags": ["chess", "strategy", "ai", "classic"],
+  "contributor": "bradygaster",
+  "dateAdded": "2026-05-23T00:44:00-07:00"
+}
