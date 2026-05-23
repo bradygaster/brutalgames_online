@@ -45,12 +45,13 @@ cd brutalgames_online
 
 ### 2) Add a game folder
 
-Every game lives in its own folder:
+Every game lives in its own folder with a `game.json` that **you own**:
 
 ```text
 games/
   your-game-id/
     index.html
+    game.json
 ```
 
 That can be the whole game.
@@ -61,6 +62,7 @@ If your game needs more stuff, bring more stuff:
 games/
   your-game-id/
     index.html
+    game.json
     styles.css
     game.js
     thumbnail.png
@@ -69,11 +71,19 @@ games/
       victory.wav
 ```
 
-### 3) Add your game to `games.json`
+### 3) Fill out your `game.json`
 
-`games.json` is the arcade registry. If your game is not in there, the lobby cannot see it.
+Each game has its own `game.json` — this is the metadata the arcade shell uses to display your cabinet. **You own this file.** If you need to fix a typo, change the description, or update tags later, just edit your `game.json` and open a PR.
 
-Add a new object to the `games` array.
+Copy from `games/_template/game.json` and fill it in.
+
+The root `games.json` is auto-generated from all per-game `game.json` files by running:
+
+```bash
+npm run build:registry
+```
+
+You do **not** need to edit the root `games.json` directly.
 
 #### Schema
 
@@ -89,6 +99,7 @@ Add a new object to the `games` array.
   "status": "active",
   "featured": false,
   "tags": ["fast", "weird", "score-chaser"],
+  "contributor": "your-github-username",
   "dateAdded": "2026-05-18T16:31:59-07:00"
 }
 ```
@@ -107,6 +118,7 @@ Add a new object to the `games` array.
 | `status` | Availability in the lobby | Use `active`, `experimental`, or `coming-soon`. `active` is launchable. |
 | `featured` | Featured slot flag | `true` if you want it eligible for the hero cabinet. Usually `false`. |
 | `tags` | Searchable flavor | Add a few useful tags, not an entire novel. |
+| `contributor` | Your GitHub username | Displayed on the card as a link to your profile. Own your cabinet. |
 | `dateAdded` | Timestamp for the drop | Use `2026-05-18T16:31:59-07:00` for your example updates in docs and copy. |
 
 ### 4) Submit the pull request
@@ -130,9 +142,10 @@ If your game is tiny, this is enough:
 games/
   coin-flip-doom/
     index.html
+    game.json
 ```
 
-Example `games.json` entry:
+Example `game.json`:
 
 ```json
 {
@@ -146,6 +159,7 @@ Example `games.json` entry:
   "status": "active",
   "featured": false,
   "tags": ["luck", "fast", "weird"],
+  "contributor": "your-github-username",
   "dateAdded": "2026-05-18T16:31:59-07:00"
 }
 ```
@@ -162,6 +176,7 @@ For a richer game, ship the supporting files too:
 games/
   laser-pong-deluxe/
     index.html
+    game.json
     game.js
     styles.css
     README.md
@@ -171,7 +186,7 @@ games/
       score.wav
 ```
 
-Example entry:
+Example `game.json`:
 
 ```json
 {
@@ -185,6 +200,7 @@ Example entry:
   "status": "active",
   "featured": true,
   "tags": ["pong", "versus", "neo-brutal"],
+  "contributor": "your-github-username",
   "dateAdded": "2026-05-18T16:31:59-07:00"
 }
 ```
@@ -263,8 +279,8 @@ The shell is static-first and iframe-friendly. Your game should be happy as a st
 Quick self-check:
 
 - your game lives in `games/<id>/`
+- your `game.json` is filled out with your GitHub username in `contributor`
 - `entryPoint` points to a real file
-- `games.json` is valid JSON
 - the game loads in a browser
 - controls are understandable
 - credits are included if you used outside assets, code, or inspiration
@@ -278,6 +294,7 @@ Use `games/_template/`.
 It gives you:
 
 - a starter `index.html`
+- a `game.json` template ready to fill in
 - matching design tokens from the shell
 - a `README.md` template for controls and credits
 
