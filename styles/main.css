@@ -142,7 +142,6 @@ h4,
 .text-arcade {
   font-family: var(--font-arcade);
   letter-spacing: var(--tracking-tight);
-  word-spacing: -0.2em;
   line-height: 1.12;
   text-transform: uppercase;
 }
