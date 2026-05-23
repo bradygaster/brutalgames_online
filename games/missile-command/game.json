@@ -2,13 +2,13 @@
   "id": "missile-command",
   "title": "Missile Command",
   "description": "Defend your cities from incoming missiles. Click to launch counter-missiles and protect civilization from annihilation.",
-  "thumbnail": "assets/thumbnails/missile-command.png",
-  "genre": "arcade",
+  "genre": "Arcade",
+  "playerCount": "1 player",
+  "thumbnail": "./assets/thumbnails/missile-command.png",
+  "entryPoint": "./games/missile-command/index.html",
+  "status": "active",
+  "featured": false,
   "tags": ["retro", "arcade", "defense", "action"],
-  "players": "1",
-  "contributor": {
-    "name": "bradygaster",
-    "url": "https://github.com/bradygaster"
-  },
-  "dateAdded": "2025-07-25"
+  "contributor": "bradygaster",
+  "dateAdded": "2026-05-23T01:20:00-07:00"
 }

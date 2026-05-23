@@ -1,7 +1,26 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-23T08:21:35.046Z",
+  "generatedAt": "2026-05-23T08:28:17.613Z",
   "games": [
+    {
+      "id": "missile-command",
+      "title": "Missile Command",
+      "description": "Defend your cities from incoming missiles. Click to launch counter-missiles and protect civilization from annihilation.",
+      "genre": "Arcade",
+      "playerCount": "1 player",
+      "thumbnail": "./assets/thumbnails/missile-command.png",
+      "entryPoint": "./games/missile-command/index.html",
+      "status": "active",
+      "featured": false,
+      "tags": [
+        "retro",
+        "arcade",
+        "defense",
+        "action"
+      ],
+      "contributor": "bradygaster",
+      "dateAdded": "2026-05-23T01:20:00-07:00"
+    },
     {
       "id": "brutal-chess",
       "title": "BrutalChess",
@@ -20,43 +39,6 @@
       ],
       "contributor": "bradygaster",
       "dateAdded": "2026-05-23T00:44:00-07:00"
-    },
-    {
-      "id": "grid-warden",
-      "title": "Grid Warden",
-      "description": "Defend a brutalist city block in a tactical survival experiment.",
-      "genre": "Strategy",
-      "playerCount": "1 player",
-      "thumbnail": "./assets/thumbnails/grid-warden.png",
-      "entryPoint": "./games/grid-warden/index.html",
-      "status": "active",
-      "featured": false,
-      "tags": [
-        "defense",
-        "survival",
-        "tactical"
-      ],
-      "contributor": "bradygaster",
-      "dateAdded": "2026-05-18T16:03:14-07:00"
-    },
-    {
-      "id": "missile-command",
-      "title": "Missile Command",
-      "description": "Defend your cities from incoming missiles. Click to launch counter-missiles and protect civilization from annihilation.",
-      "thumbnail": "assets/thumbnails/missile-command.png",
-      "genre": "arcade",
-      "tags": [
-        "retro",
-        "arcade",
-        "defense",
-        "action"
-      ],
-      "players": "1",
-      "contributor": {
-        "name": "bradygaster",
-        "url": "https://github.com/bradygaster"
-      },
-      "dateAdded": "2025-07-25"
     }
   ]
 }
