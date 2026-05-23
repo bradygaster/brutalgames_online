@@ -1,4 +1,5 @@
 import { GameLoader } from './components/game-loader.js';
+import { initThemeMaker } from './components/theme-maker.js';
 
 export function boot() {
   const loader = new GameLoader({
@@ -15,6 +16,7 @@ export function boot() {
   });
 
   loader.init();
+  initThemeMaker();
   return loader;
 }
 
