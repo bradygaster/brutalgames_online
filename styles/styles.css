@@ -455,6 +455,50 @@ main {
   background: var(--color-surface-alt) !important;
 }
 
-.theme-random {
-  background: var(--color-green) !important;
+.theme-maker-themes {
+  margin-top: var(--space-2);
+}
+
+.theme-select-label {
+  display: block;
+  font-family: var(--font-arcade, monospace);
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-2);
+  color: var(--color-yellow);
+}
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.theme-chip {
+  padding: 6px 8px;
+  font-size: 0.5rem;
+  font-family: var(--font-arcade, monospace);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  border: 2px solid var(--chip-accent, #ff47b8);
+  border-radius: 4px;
+  background: var(--chip-bg, #141414);
+  color: var(--chip-accent, #ff47b8);
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.theme-chip:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px var(--chip-accent, #ff47b8);
+}
+
+.theme-chip:active {
+  transform: scale(0.95);
 }

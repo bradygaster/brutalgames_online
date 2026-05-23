@@ -17,6 +17,22 @@ const THEME_VARS = [
   { key: '--color-red', label: 'Kill Screen', default: '#ff5a36' }
 ];
 
+const THEMES = [
+  { name: 'Default', colors: { '--color-background': '#141414', '--color-surface': '#fffdf7', '--color-pink': '#ff47b8', '--color-yellow': '#ffe100', '--color-green': '#83ff3c', '--color-blue': '#2d7fff', '--color-red': '#ff5a36' }},
+  { name: 'Midnight Tokyo', colors: { '--color-background': '#0a0a1a', '--color-surface': '#1a1a2e', '--color-pink': '#e94560', '--color-yellow': '#f5a623', '--color-green': '#00d4aa', '--color-blue': '#533483', '--color-red': '#e94560' }},
+  { name: 'Arcade Fire', colors: { '--color-background': '#1a0000', '--color-surface': '#2d0a0a', '--color-pink': '#ff2d55', '--color-yellow': '#ff9500', '--color-green': '#ffcc02', '--color-blue': '#ff6b35', '--color-red': '#dc1d24' }},
+  { name: 'Vapor Wave', colors: { '--color-background': '#1a0033', '--color-surface': '#2d1b4e', '--color-pink': '#ff71ce', '--color-yellow': '#fffb96', '--color-green': '#b6ff9e', '--color-blue': '#01cdfe', '--color-red': '#ff6b9d' }},
+  { name: 'Game Boy', colors: { '--color-background': '#0f380f', '--color-surface': '#306230', '--color-pink': '#8bac0f', '--color-yellow': '#9bbc0f', '--color-green': '#8bac0f', '--color-blue': '#306230', '--color-red': '#0f380f' }},
+  { name: 'CRT Amber', colors: { '--color-background': '#0a0800', '--color-surface': '#1a1400', '--color-pink': '#ffb000', '--color-yellow': '#ff8c00', '--color-green': '#ffc800', '--color-blue': '#cc7700', '--color-red': '#ff5500' }},
+  { name: 'Ocean Depths', colors: { '--color-background': '#001220', '--color-surface': '#001e36', '--color-pink': '#00b4d8', '--color-yellow': '#90e0ef', '--color-green': '#48cae4', '--color-blue': '#0077b6', '--color-red': '#023e8a' }},
+  { name: 'Cyberpunk', colors: { '--color-background': '#0d0221', '--color-surface': '#1a0533', '--color-pink': '#ff00ff', '--color-yellow': '#fcee09', '--color-green': '#00ff41', '--color-blue': '#0abdc6', '--color-red': '#ea00d9' }},
+  { name: 'Rust Belt', colors: { '--color-background': '#1c1410', '--color-surface': '#2e2218', '--color-pink': '#c75c2c', '--color-yellow': '#d4a04a', '--color-green': '#8b9d56', '--color-blue': '#5c7a8a', '--color-red': '#a0392b' }},
+  { name: 'Bubblegum', colors: { '--color-background': '#2d1033', '--color-surface': '#3d1a45', '--color-pink': '#ff69b4', '--color-yellow': '#ffd700', '--color-green': '#7fff00', '--color-blue': '#87ceeb', '--color-red': '#ff1493' }},
+  { name: 'Hacker', colors: { '--color-background': '#000000', '--color-surface': '#0a0a0a', '--color-pink': '#00ff00', '--color-yellow': '#33ff33', '--color-green': '#00ff00', '--color-blue': '#009900', '--color-red': '#00cc00' }},
+  { name: 'Sunset Strip', colors: { '--color-background': '#1a0a1e', '--color-surface': '#2a1428', '--color-pink': '#ff4081', '--color-yellow': '#ff8a65', '--color-green': '#ffab40', '--color-blue': '#7c4dff', '--color-red': '#ff5252' }},
+  { name: 'Ice Cave', colors: { '--color-background': '#0a1628', '--color-surface': '#132238', '--color-pink': '#81d4fa', '--color-yellow': '#b3e5fc', '--color-green': '#4fc3f7', '--color-blue': '#0288d1', '--color-red': '#01579b' }},
+];
+
 function setCookie(name, value, days) {
   const expires = new Date(Date.now() + days * 864e5).toUTCString();
   document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; path=/; SameSite=Lax`;
@@ -69,9 +85,12 @@ export function initThemeMaker() {
     <div class="theme-maker-drawer" hidden>
       <h3 class="theme-maker-title">Paint the arcade</h3>
       <div class="theme-maker-swatches"></div>
+      <div class="theme-maker-themes">
+        <label class="theme-select-label">Color Themes</label>
+        <div class="theme-grid"></div>
+      </div>
       <div class="theme-maker-actions">
         <button class="button theme-reset" type="button">Reset</button>
-        <button class="button theme-random" type="button">Surprise me</button>
       </div>
     </div>
   `;
@@ -80,7 +99,26 @@ export function initThemeMaker() {
   const drawer = panel.querySelector('.theme-maker-drawer');
   const swatches = panel.querySelector('.theme-maker-swatches');
   const resetBtn = panel.querySelector('.theme-reset');
-  const randomBtn = panel.querySelector('.theme-random');
+  const themeGrid = panel.querySelector('.theme-grid');
+
+  // Build theme buttons
+  THEMES.forEach((theme) => {
+    const btn = document.createElement('button');
+    btn.className = 'theme-chip';
+    btn.type = 'button';
+    btn.textContent = theme.name;
+    btn.style.setProperty('--chip-bg', theme.colors['--color-background']);
+    btn.style.setProperty('--chip-accent', theme.colors['--color-pink']);
+    btn.addEventListener('click', () => {
+      applyTheme(theme.colors);
+      saveTheme(theme.colors);
+      swatches.querySelectorAll('input[type="color"]').forEach((input) => {
+        const val = theme.colors[input.dataset.var];
+        if (val) input.value = val;
+      });
+    });
+    themeGrid.appendChild(btn);
+  });
 
   // Build color pickers
   const current = saved || {};
@@ -119,26 +157,6 @@ export function initThemeMaker() {
     });
   });
 
-  // Random fun palette
-  randomBtn.addEventListener('click', () => {
-    const hue = Math.random() * 360;
-    const palette = {
-      '--color-background': hslToHex(hue, 10, 8),
-      '--color-surface': hslToHex((hue + 40) % 360, 20, 96),
-      '--color-pink': hslToHex((hue + 300) % 360, 100, 60),
-      '--color-yellow': hslToHex((hue + 60) % 360, 100, 55),
-      '--color-green': hslToHex((hue + 120) % 360, 100, 60),
-      '--color-blue': hslToHex((hue + 210) % 360, 100, 55),
-      '--color-red': hslToHex((hue + 15) % 360, 100, 55)
-    };
-    applyTheme(palette);
-    saveTheme(palette);
-    swatches.querySelectorAll('input[type="color"]').forEach((input) => {
-      const val = palette[input.dataset.var];
-      if (val) input.value = val;
-    });
-  });
-
   function persistCurrentChoices() {
     const theme = {};
     swatches.querySelectorAll('input[type="color"]').forEach((input) => {
@@ -148,16 +166,4 @@ export function initThemeMaker() {
   }
 
   document.body.appendChild(panel);
-}
-
-function hslToHex(h, s, l) {
-  s /= 100;
-  l /= 100;
-  const a = s * Math.min(l, 1 - l);
-  const f = (n) => {
-    const k = (n + h / 30) % 12;
-    const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
-    return Math.round(255 * color).toString(16).padStart(2, '0');
-  };
-  return `#${f(0)}${f(8)}${f(4)}`;
 }
