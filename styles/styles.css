@@ -42,7 +42,6 @@ main {
 .games-section,
 .about-section,
 .site-footer,
-.filters,
 .launcher-shell {
   border: var(--border-thick) solid var(--color-border);
   border-radius: var(--radius-sm);
