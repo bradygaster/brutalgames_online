@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SNAKE</title>
+  <link rel="stylesheet" href="../../shared/theme.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <a class="back-link" href="../../index.html">&larr; Back to console</a>
+    <h1 class="title">SNAKE</h1>
+
+    <div class="hud">
+      <div class="hud-item">SCORE <span id="score">0</span></div>
+      <div class="hud-item">LENGTH <span id="lives">3</span></div>
+      <div class="hud-item">SPEED <span id="level">1</span></div>
+      <div class="hud-item">HIGH <span id="high">0</span></div>
+    </div>
+
+    <div class="frame">
+      <canvas id="game" width="800" height="600"></canvas>
+      <div id="overlay">
+        <h2 id="overlay-title">SNAKE</h2>
+        <p id="overlay-msg">Press ENTER to start</p>
+      </div>
+    </div>
+
+    <ul class="controls">
+      <li><kbd>←</kbd><kbd>↑</kbd><kbd>↓</kbd><kbd>→</kbd> / <kbd>WASD</kbd> Steer</li>
+      <li><kbd>P</kbd> Pause</li>
+      <li><kbd>ENTER</kbd> Start / Restart</li>
+    </ul>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "agents": {
+    "lead": {
+      "persistent_name": "Lead",
+      "universe": "descriptive",
+      "created_at": "2026-10-22T18:56:59-07:00",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "gameplay": {
+      "persistent_name": "Gameplay",
+      "universe": "descriptive",
+      "created_at": "2026-10-22T18:56:59-07:00",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "visuals": {
+      "persistent_name": "Visuals",
+      "universe": "descriptive",
+      "created_at": "2026-10-22T18:56:59-07:00",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "tester": {
+      "persistent_name": "Tester",
+      "universe": "descriptive",
+      "created_at": "2026-10-22T18:56:59-07:00",
+      "legacy_named": false,
+      "status": "active"
+    }
+  }
+}

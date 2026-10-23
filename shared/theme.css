@@ -1,0 +1,37 @@
+/* Shared purple neo-brutalist theme. Games link this BEFORE their own style.css. */
+:root {
+  --bg: #7c3aed;
+  --panel: #b794f6;
+  --screen: #2b1055;
+  --accent: #fde047;
+  --ink: #000;
+  --border: 4px solid var(--ink);
+  --border-thick: 6px solid var(--ink);
+  --shadow: 6px 6px 0 var(--ink);
+  --shadow-lg: 10px 10px 0 var(--ink);
+  --font: "Courier New", ui-monospace, Menlo, Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-weight: 900;
+}
+
+.back-link {
+  display: inline-block;
+  margin: 0 0 12px;
+  padding: 4px 12px;
+  background: var(--accent);
+  color: var(--ink);
+  border: var(--border);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.back-link:hover { background: var(--panel); }

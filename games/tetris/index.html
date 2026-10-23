@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TETRIS</title>
+  <link rel="stylesheet" href="../../shared/theme.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <a class="back-link" href="../../index.html">&larr; Back to console</a>
+    <h1 class="title">TETRIS</h1>
+
+    <div class="hud">
+      <div class="hud-item">SCORE <span id="score">0</span></div>
+      <div class="hud-item">LINES <span id="lives">0</span></div>
+      <div class="hud-item">LEVEL <span id="level">1</span></div>
+      <div class="hud-item">HIGH <span id="high">0</span></div>
+    </div>
+
+    <div class="frame">
+      <canvas id="game" width="800" height="600"></canvas>
+      <div id="overlay">
+        <h2 id="overlay-title">TETRIS</h2>
+        <p id="overlay-msg">Press ENTER to start</p>
+      </div>
+    </div>
+
+    <ul class="controls">
+      <li><kbd>←</kbd><kbd>→</kbd> Move</li>
+      <li><kbd>↑</kbd>/<kbd>X</kbd> Rotate</li>
+      <li><kbd>↓</kbd> Soft drop</li>
+      <li><kbd>SPACE</kbd> Hard drop</li>
+      <li><kbd>C</kbd> Hold</li>
+      <li><kbd>P</kbd> Pause</li>
+      <li><kbd>ENTER</kbd> Start / Restart</li>
+    </ul>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>

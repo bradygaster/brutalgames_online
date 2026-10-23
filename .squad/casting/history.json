@@ -1,0 +1,21 @@
+{
+  "universe_usage_history": [
+    {
+      "universe": "descriptive",
+      "assignment_id": "asteroids-init-20261022",
+      "used_at": "2026-10-22T18:56:59-07:00"
+    }
+  ],
+  "assignment_cast_snapshots": {
+    "asteroids-init-20261022": {
+      "universe": "descriptive",
+      "agents": {
+        "lead": "Lead",
+        "gameplay": "Gameplay",
+        "visuals": "Visuals",
+        "tester": "Tester"
+      },
+      "created_at": "2026-10-22T18:56:59-07:00"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ASTEROIDS</title>
+  <link rel="stylesheet" href="../../shared/theme.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <a class="back-link" href="../../index.html">&larr; Back to console</a>
+    <h1 class="title">ASTEROIDS</h1>
+
+    <div class="hud">
+      <div class="hud-item">SCORE <span id="score">0</span></div>
+      <div class="hud-item">HIGH <span id="high">0</span></div>
+      <div class="hud-item">LIVES <span id="lives">3</span></div>
+      <div class="hud-item">LEVEL <span id="level">1</span></div>
+    </div>
+
+    <div class="frame">
+      <canvas id="game" width="800" height="600"></canvas>
+      <div id="overlay">
+        <h2 id="overlay-title">ASTEROIDS</h2>
+        <p id="overlay-msg">Press ENTER to start</p>
+      </div>
+    </div>
+
+    <ul class="controls">
+      <li><kbd>←</kbd><kbd>→</kbd> / <kbd>A</kbd><kbd>D</kbd> Rotate</li>
+      <li><kbd>↑</kbd> / <kbd>W</kbd> Thrust</li>
+      <li><kbd>SPACE</kbd> Fire</li>
+      <li><kbd>P</kbd> Pause</li>
+      <li><kbd>ENTER</kbd> Start</li>
+    </ul>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
