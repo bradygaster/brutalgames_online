@@ -3,6 +3,10 @@
 A zero-dependency browser arcade built by a native Squad. Pick a game from the
 neo-brutalist console and play entirely in the browser.
 
+<p align="center">
+  <img src="docs/images/arcade-console.png" alt="Brutal Games Online arcade console showing seven playable games" width="100%">
+</p>
+
 ## Arcade console
 
 Open `index.html` to pick a game. Use the arrow keys to move through the
